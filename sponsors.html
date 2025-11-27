@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sponsors & Partners - GAME ON</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 50px 20px 120px 20px; /* padding bottom for buttons */
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .home-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(images/purplebg.jpg) center/cover no-repeat;
+      z-index: -2;
+      filter: brightness(0.7);
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.45);
+      z-index: -1;
+    }
+
+    .header-banner {
+      margin-top: 40px;
+      margin-bottom: 40px; /* extra spacing */
+      font-size: 36px;
+      font-weight: 700;
+      text-shadow: 0 0 10px #474ed2, 0 0 20px #c300e2;
+      letter-spacing: 3px;
+    }
+
+    .sub-header {
+      font-size: 24px;
+      font-weight: 700;
+      text-shadow: 0 0 8px #474ed2, 0 0 16px #c300e2;
+      margin-bottom: 40px;
+    }
+
+    /* Grid style for both sponsors and partners */
+    .grid {
+      display: grid;
+      gap: 30px;
+      justify-items: center; /* center each item */
+      margin-bottom: 60px;
+    }
+
+    .sponsor-grid {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 900px;
+    }
+
+    .partner-grid {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 1200px;
+    }
+
+    .grid img {
+      width: 140px;  /* increased size */
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #474ed2;
+      box-shadow: 0 0 10px #474ed2, 0 0 20px #c300e2;
+      transition: transform 0.3s ease;
+    }
+
+    .grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Buttons fixed at bottom left and right */
+    .btn-return {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      padding: 10px 25px;
+      font-size: 18px;
+      background: black;
+      color: white;
+      border: 2px solid #474ed2;
+      border-radius: 8px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      box-shadow: 0 0 6px #474ed2, 0 0 12px #c300e2;
+      transition: 0.3s ease-in-out;
+    }
+
+    .btn-continue {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 10px 25px;
+      font-size: 18px;
+      background: black;
+      color: white;
+      border: 2px solid #474ed2;
+      border-radius: 8px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      box-shadow: 0 0 6px #474ed2, 0 0 12px #c300e2;
+      transition: 0.3s ease-in-out;
+    }
+
+    .btn-return:hover,
+    .btn-continue:hover {
+      background: #474ed2;
+      border-color: #c300e2;
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #474ed2, 0 0 24px #c300e2;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .header-banner { font-size: 28px; }
+      .sub-header { font-size: 20px; margin-bottom: 30px; }
+      .sponsor-grid, .partner-grid { gap: 20px; }
+      .grid img { width: 120px; height: 120px; } /* slightly bigger for tablets */
+      .btn-return, .btn-continue { font-size: 16px; padding: 8px 20px; }
+    }
+
+    @media (max-width: 480px) {
+      .header-banner { font-size: 24px; margin-top: 20px; }
+      .sub-header { font-size: 18px; margin-bottom: 25px; }
+      .sponsor-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+      .partner-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+      .grid img { width: 100px; height: 100px; } /* bigger on small phones */
+      .btn-return, .btn-continue { font-size: 14px; padding: 6px 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="home-bg"></div>
+  <div class="overlay"></div>
+
+  <!-- Sponsors Section -->
+  <div class="header-banner">SPECIAL THANKS TO</div>
+  <div class="sub-header">Our Sponsors</div>
+
+  <div class="grid sponsor-grid">
+    <img src="spons/spons1.png" alt="Sponsor 1">
+    <img src="spons/spons2.png" alt="Sponsor 2">
+    <img src="spons/spons3.png" alt="Sponsor 3">
+    <img src="spons/spons4.png" alt="Sponsor 4">
+    <img src="spons/spons5.png" alt="Sponsor 5">
+    <img src="spons/spons6.png" alt="Sponsor 6">
+  </div>
+
+  <!-- Partners Section -->
+  <div class="sub-header">Our Partners</div>
+
+  <div class="grid partner-grid">
+    <img src="images/partner1.png" alt="Partner 1">
+    <img src="images/partner2.png" alt="Partner 2">
+    <img src="images/partner3.png" alt="Partner 3">
+    <img src="images/partner4.png" alt="Partner 4">
+    <img src="images/partner5.png" alt="Partner 5">
+    <img src="images/partner6.png" alt="Partner 6">
+    <img src="images/partner7.png" alt="Partner 7">
+    <img src="images/partner8.png" alt="Partner 8">
+  </div>
+
+  <!-- Navigation Buttons -->
+  <a href="acknowledgements.html" class="btn-return">← Return</a>
+  <a href="artists.html" class="btn-continue">Continue →</a>
+
+</body>
+</html>

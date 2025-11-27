@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAST Newbies - GAME ON</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 50px 20px 120px 20px;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .home-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(images/purplebg.jpg) center/cover no-repeat;
+      z-index: -2;
+      filter: brightness(0.7);
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.45);
+      z-index: -1;
+    }
+
+    .title-main {
+      font-size: 48px;
+      font-weight: 700;
+      text-shadow: 0 0 10px #474ed2, 0 0 20px #c300e2;
+      margin-bottom: 10px;
+    }
+
+    .title-sub {
+      font-size: 28px;
+      font-weight: 500;
+      text-shadow: 0 0 8px #474ed2, 0 0 16px #c300e2;
+      margin-bottom: 40px;
+    }
+
+    /* Card container */
+    .cast-card {
+      text-align: center;
+    }
+
+    .cast-name {
+      margin-top: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-shadow: 0 0 6px #474ed2, 0 0 10px #c300e2;
+    }
+
+    /* DESKTOP — 4 columns */
+    .cast-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 25px;
+      row-gap: 45px;
+      max-width: 900px;
+      margin: 0 auto;
+      justify-items: center;
+    }
+
+    .cast-card img {
+      width: 170px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* TABLET — 2 columns */
+    @media (max-width: 768px) {
+      .cast-grid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 40px;
+        max-width: 380px;
+      }
+
+      .cast-card img {
+        width: 150px;
+        height: 220px;
+      }
+
+      .cast-name {
+        font-size: 14px;
+      }
+    }
+
+    /* PHONE — 2 columns, bigger images */
+    @media (max-width: 480px) {
+      .cast-grid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 15px;
+        row-gap: 35px;
+      }
+
+      .cast-card img {
+        width: 46vw;
+        height: 70vw;
+        max-width: 210px;
+        max-height: 310px;
+      }
+
+      .cast-name {
+        font-size: 13px;
+      }
+    }
+
+    /* Navigation Buttons */
+    .btn-return,
+    .btn-continue {
+      position: fixed;
+      bottom: 30px;
+      padding: 8px 20px;
+      font-size: 16px;
+      background: black;
+      color: white;
+      border: 2px solid #474ed2;
+      border-radius: 8px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      box-shadow: 0 0 6px #474ed2, 0 0 12px #c300e2;
+      transition: 0.3s ease-in-out;
+    }
+
+    .btn-return { left: 30px; }
+    .btn-continue { right: 30px; }
+
+    .btn-return:hover,
+    .btn-continue:hover {
+      background: #474ed2;
+      border-color: #c300e2;
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #474ed2, 0 0 24px #c300e2;
+    }
+
+    @media (max-width: 768px) {
+      .btn-return, .btn-continue {
+        font-size: 16px;
+        padding: 8px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .btn-return, .btn-continue {
+        font-size: 14px;
+        padding: 6px 15px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="home-bg"></div>
+  <div class="overlay"></div>
+
+  <div class="title-main">CAST</div>
+  <div class="title-sub">Newbies</div>
+
+  <div class="cast-grid">
+    <div class="cast-card"><img src="CAST POSTING/ERICA.png"><p class="cast-name">Erica Eunice M. Alalay</p></div>
+    <div class="cast-card"><img src="CAST POSTING/ANAIAH.png"><p class="cast-name">Anaiah Jazliel D. Amazona</p></div>
+    <div class="cast-card"><img src="CAST POSTING/AYASHA.png"><p class="cast-name">Ayasha Deinelle T. Atendido</p></div>
+    <div class="cast-card"><img src="CAST POSTING/DIANA.png"><p class="cast-name">Diana Erich T. Barreto</p></div>
+
+    <div class="cast-card"><img src="CAST POSTING/NATHAN.png"><p class="cast-name">Nathan Andrei S.Boongaling</p></div>
+    <div class="cast-card"><img src="CAST POSTING/TINE.png"><p class="cast-name">Kristine Cassandra J. Cruz</p></div>
+    <div class="cast-card"><img src="CAST POSTING/ANGELIKA.png"><p class="cast-name">Angelica G. Delos Reyes</p></div>
+    <div class="cast-card"><img src="CAST POSTING/KARYLLE.png"><p class="cast-name">Karylle Furing</p></div>
+
+    <div class="cast-card"><img src="CAST POSTING/ZOE.png"><p class="cast-name">Carl Zoe Guevara</p></div>
+    <div class="cast-card"><img src="CAST POSTING/BRIE.png"><p class="cast-name">Aubrey Keren V. Labradores</p></div>
+    <div class="cast-card"><img src="CAST POSTING/RICA.png"><p class="cast-name">Rica Mae P. Lagsa</p></div>
+    <div class="cast-card"><img src="CAST POSTING/RHEA.png"><p class="cast-name">Rea Mae Anne M. Layosa</p></div>
+
+    <div class="cast-card"><img src="CAST POSTING/RICHI.png"><p class="cast-name">Richero B. Lestones</p></div>
+    <div class="cast-card"><img src="CAST POSTING/ARLAN.png"><p class="cast-name">Arllan L. Lopez</p></div>
+    <div class="cast-card"><img src="CAST POSTING/AYEKA.png"><p class="cast-name">Briseus Ayeka B. Macariola</p></div>
+    <div class="cast-card"><img src="CAST POSTING/KIMI.png"><p class="cast-name">Kimi Ashley F. Navarro</p></div>
+
+    <div class="cast-card"><img src="CAST POSTING/AYEZA.png"><p class="cast-name">Ayeza L. Ortigosa</p></div>
+    <div class="cast-card"><img src="CAST POSTING/CAITLYN.png"><p class="cast-name">Genesis Caitlyn C. Pascual</p></div>
+    <div class="cast-card"><img src="CAST POSTING/CELIA.png"><p class="cast-name">Maria Celia T. Porcado</p></div>
+    <div class="cast-card"><img src="CAST POSTING/ANEESA.png"><p class="cast-name">Aneesa Mharise T. Rapada</p></div>
+
+    <div class="cast-card"><img src="CAST POSTING/MICA.png"><p class="cast-name">Michaella Allison M. Reyes</p></div>
+    <div class="cast-card"><img src="CAST POSTING/YAZHI.png"><p class="cast-name">Yazhi Shanaia M. Robles</p></div>
+    <div class="cast-card"><img src="CAST POSTING/JEWEL.png"><p class="cast-name">Jewel L. Saculles</p></div>
+  </div>
+
+  <a href="cast.html" class="btn-return">← Return</a>
+  <a href="menu.html" class="btn-continue">Back to Menu</a>
+
+</body>
+</html>

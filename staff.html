@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Production Crew - GAME ON</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      color: white;
+      text-align: center;
+      padding-bottom: 120px;
+    }
+
+    .home-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(images/purplebg.jpg) center/cover no-repeat;
+      z-index: -2;
+      filter: brightness(0.7);
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.45);
+      z-index: -1;
+    }
+
+    .header-banner {
+      margin-top: 60px;
+      font-size: 60px;
+      font-weight: 700;
+      text-shadow: 0 0 10px #474ed2, 0 0 20px #c300e2;
+      letter-spacing: 3px;
+      margin-bottom: 40px;
+    }
+
+    /* Centered role listing */
+    .centered-staff {
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+      line-height: 1.8;
+      font-size: 18px;
+    }
+
+  
+    /* Glowing lines */
+.glow-line {
+  height: 3px;
+  width: 300px;
+  margin: 25px auto; /* equal space on top and bottom */
+  background: #474ed2;
+  box-shadow: 0 0 8px #474ed2, 0 0 16px #c300e2;
+  border-radius: 2px;
+}
+
+
+    /* Section titles */
+    .section-title {
+      font-size: 24px;
+      font-weight: 700;
+      text-shadow: 0 0 10px #474ed2, 0 0 20px #c300e2;
+      margin: 30px 0 20px 0;
+    }
+
+    /* Technical Crew / Production Crew listing */
+    .crew-list {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr; /* left, colon, right */
+      justify-content: center;
+      align-items: start;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .crew-role {
+      text-align: right;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 0 0 8px #474ed2, 0 0 16px #ffffff;
+      padding-right: 5px;
+    }
+
+    .crew-colon {
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 0 0 8px #474ed2, 0 0 16px #ffffff;
+      padding: 0 5px;
+    }
+
+    .crew-name {
+      text-align: left;
+    }
+
+    /* Buttons */
+    .btn-back {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      padding: 10px 25px;
+      font-size: 18px;
+      background: black;
+      color: white;
+      border: 2px solid #474ed2;
+      border-radius: 8px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      box-shadow: 0 0 6px #474ed2, 0 0 12px #c300e2;
+      transition: 0.3s ease-in-out;
+    }
+
+    .btn-back:hover {
+      background: #474ed2;
+      border-color: #c300e2;
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #474ed2, 0 0 24px #c300e2;
+    }
+
+    @media (max-width: 768px) {
+      .header-banner { font-size: 28px; }
+      .centered-staff { font-size: 16px; }
+      .section-title { font-size: 22px; }
+      .crew-list { font-size: 15px; grid-template-columns: 1fr auto 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .header-banner { font-size: 24px; margin-top: 20px; }
+      .centered-staff { font-size: 14px; }
+      .section-title { font-size: 20px; }
+      .crew-list { font-size: 14px; grid-template-columns: 1fr auto 1fr; }
+      .glow-line { width: 200px; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="home-bg"></div>
+  <div class="overlay"></div>
+
+  <div class="header-banner">THE PRODUCTION CREW</div>
+
+  <!-- Glow line before Event Head -->
+  <div class="glow-line"></div>
+  <div class="section-title">Lead Crew</div>
+
+  <!-- Event Head → Stage Managers -->
+  <div class="centered-staff" style="display: inline-block; text-align: left;">
+
+    <div style="display: grid; grid-template-columns: auto 10px auto; align-items: start; gap: 5px; margin-bottom: 10px;">
+      <div class="crew-role" style="text-align: right;">Event Head</div>
+      <div class="crew-colon">:</div>
+      <div class="crew-name">Phol Ace Escal</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: auto 10px auto; align-items: start; gap: 5px; margin-bottom: 10px;">
+      <div class="crew-role" style="text-align: right;">Assoc. Event Head</div>
+      <div class="crew-colon">:</div>
+      <div class="crew-name">Christina Julianne Demegillo</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: auto 10px auto; align-items: start; gap: 5px; margin-bottom: 10px;">
+      <div class="crew-role" style="text-align: right;">Ouer-All Director</div>
+      <div class="crew-colon">:</div>
+      <div class="crew-name">Delsie Boy Bohol</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: auto 10px auto; align-items: start; gap: 5px; margin-bottom: 10px;">
+      <div class="crew-role" style="text-align: right;">Production Manager</div>
+      <div class="crew-colon">:</div>
+      <div class="crew-name">Jonas Earl Samson</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: auto 10px auto; align-items: start; gap: 5px; margin-bottom: 10px;">
+      <div class="crew-role" style="text-align: right;">Stage Manager</div>
+      <div class="crew-colon">:</div>
+      <div class="crew-name">
+        Sean Eisley Ison<br>
+        Sheila Mae San Jose
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Technical Crew -->
+  <div class="glow-line"></div>
+  <div class="section-title">Technical Crew</div>
+
+  <div class="centered-staff" style="display: inline-block; text-align: left;">
+
+    <div style="display: grid; grid-template-columns: auto 10px auto; align-items: start; gap: 5px; margin-bottom: 10px;">
+      <div class="crew-role" style="text-align: right;">Lights</div>
+      <div class="crew-colon">:</div>
+      <div class="crew-name">
+        Jeyralene Mae Lagus<br>
+        Kyle Christian Hernandez
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: auto 10px auto; align-items: start; gap: 5px; margin-bottom: 10px;">
+      <div class="crew-role" style="text-align: right;">Music</div>
+      <div class="crew-colon">:</div>
+      <div class="crew-name">Genesis Psalm Sadol</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: auto 10px auto; align-items: start; gap: 5px; margin-bottom: 10px;">
+      <div class="crew-role" style="text-align: right;">AVP</div>
+      <div class="crew-colon">:</div>
+      <div class="crew-name">Patricia Javier</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: auto 10px auto; align-items: start; gap: 5px; margin-bottom: 10px;">
+      <div class="crew-role" style="text-align: right;">VO</div>
+      <div class="crew-colon">:</div>
+      <div class="crew-name">Samantha Nalene Santos</div>
+    </div>
+
+  </div>
+
+  <div class="glow-line"></div>
+
+  <!-- Production Crew -->
+  <div class="section-title">Support Crew</div>
+  <div class="sub-list">
+    Rauschen Agustin<br>
+    Fitz Ardeña<br>
+    Trisha Begornia<br>
+    Jasmine Ignacio<br>
+    Elijah Adame<br>
+    Veatriesh Javier<br>
+    Edciel Lontoc<br>
+    Ezekiel Sabido<br>
+    Jennifer Sasutona<br>
+    Daphnie Villasis<br>
+    Aaliyah Yoro
+  </div>
+
+  <a href="menu.html" class="btn-back">← Return</a>
+
+</body>
+</html>
