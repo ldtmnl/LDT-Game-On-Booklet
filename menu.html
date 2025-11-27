@@ -15,7 +15,7 @@
       width: 100%;
       height: 100%;
       font-family: 'Orbitron', sans-serif;
-      background: transparent;   /* allow background image to show */
+      background: transparent;
       overflow: hidden;
     }
 
@@ -34,8 +34,6 @@
       z-index: -999;
     }
 
-  
-
     /* Header */
     .header-banner {
       text-align: center;
@@ -45,7 +43,6 @@
       text-shadow: 0 0 10px #474ed2, 0 0 20px #c300e2;
       letter-spacing: 3px;
       margin: 60px 0 40px 0;
-      position: relative;
       z-index: 10;
       animation: fadeIn 1.5s forwards;
     }
@@ -80,18 +77,19 @@
       box-shadow: 0 0 6px #474ed2, 0 0 12px #c300e2;
       text-shadow: 0 0 3px #474ed2, 0 0 6px #c300e2;
       transition: all 0.3s ease-in-out;
-      gap: 10px;
       white-space: nowrap;
       opacity: 0;
       animation: fadeIn 1s forwards;
     }
 
-    /* Stagger button animation */
+    /* Stagger animation (UPDATED) */
     .menu-btn:nth-child(1) { animation-delay: 0.5s; }
     .menu-btn:nth-child(2) { animation-delay: 1s; }
     .menu-btn:nth-child(3) { animation-delay: 1.5s; }
     .menu-btn:nth-child(4) { animation-delay: 2s; }
     .menu-btn:nth-child(5) { animation-delay: 2.5s; }
+    .menu-btn:nth-child(6) { animation-delay: 3s; }
+    .menu-btn:nth-child(7) { animation-delay: 3.5s; }
 
     .menu-btn:hover {
       background: #474ed2;
@@ -113,10 +111,8 @@
       border-radius: 8px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      cursor: pointer;
       text-decoration: none;
       box-shadow: 0 0 6px #474ed2, 0 0 12px #c300e2;
-      text-shadow: 0 0 3px #474ed2, 0 0 6px #c300e2;
       transition: all 0.3s ease-in-out;
       z-index: 10;
     }
@@ -137,13 +133,11 @@
     @media (max-width: 768px) {
       .header-banner { font-size: 50px; }
       .menu-btn { font-size: 18px; padding: 12px 22px; }
-      .btn-back { font-size: 14px; padding: 8px 18px; }
     }
 
     @media (max-width: 480px) {
-      .header-banner { font-size: 35px; margin: 40px 0 20px 0; }
+      .header-banner { font-size: 35px; }
       .menu-btn { font-size: 16px; padding: 10px 18px; }
-      .btn-back { font-size: 14px; padding: 8px 16px; }
     }
   </style>
 </head>
@@ -151,16 +145,17 @@
 <body>
 
   <div class="home-bg"></div>
-  <div class="overlay"></div>
 
   <div class="header-banner">GAME ON MENU</div>
 
   <div class="menu-container">
     <a href="level1.html" class="menu-btn">🎮 Program Flow</a>
     <a href="cast.html" class="menu-btn">🕹️ Cast Members</a>
+    <a href="choreographers.html" class="menu-btn">💃 Choreographers</a>
     <a href="staff.html" class="menu-btn">🛠️ The Crew</a>
     <a href="acknowledgements.html" class="menu-btn">🌟 Acknowledgements</a>
     <a href="feedback.html" class="menu-btn">📩 Feedback</a>
+    <a href="socials.html" class="menu-btn">🔗 Socials</a>
   </div>
 
   <a href="welcome.html" class="btn-back">← Return</a>
