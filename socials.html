@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Socials - GAME ON</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      font-family: 'Orbitron', sans-serif;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    /* Background */
+    .home-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('images/purplebg.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.7);
+      z-index: -1;
+    }
+
+    /* Header */
+    .header-banner {
+      text-align: center;
+      color: white;
+      font-size: 65px;
+      font-weight: 700;
+      text-shadow: 0 0 10px #474ed2, 0 0 20px #c300e2;
+      letter-spacing: 3px;
+      margin: 60px 0 20px;
+      animation: fadeIn 1.2s forwards;
+    }
+
+    .subtext {
+      text-align: center;
+      color: #ddd;
+      font-size: 18px;
+      margin-bottom: 50px;
+      letter-spacing: 1px;
+      animation: fadeIn 1.5s forwards;
+    }
+
+    /* Socials container */
+    .socials-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+
+    /* Social buttons */
+    .social-btn {
+      width: 280px;
+      padding: 16px;
+      font-size: 18px;
+      color: white;
+      background: black;
+      border: 2px solid #474ed2;
+      border-radius: 12px;
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: 2px;
+      box-shadow: 0 0 6px #474ed2, 0 0 12px #c300e2;
+      text-shadow: 0 0 3px #474ed2, 0 0 6px #c300e2;
+      transition: all 0.3s ease-in-out;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    /* Stagger animation */
+    .social-btn:nth-child(1) { animation-delay: 0.5s; }
+    .social-btn:nth-child(2) { animation-delay: 1s; }
+    .social-btn:nth-child(3) { animation-delay: 1.5s; }
+
+    .social-btn:hover {
+      background: #474ed2;
+      border-color: #c300e2;
+      transform: scale(1.06);
+      box-shadow: 0 0 14px #474ed2, 0 0 30px #c300e2;
+    }
+
+    /* Return button */
+    .btn-back {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background: black;
+      border: 2px solid #474ed2;
+      border-radius: 8px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      box-shadow: 0 0 6px #474ed2, 0 0 12px #c300e2;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-back:hover {
+      background: #474ed2;
+      border-color: #c300e2;
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #474ed2, 0 0 24px #c300e2;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .header-banner { font-size: 45px; }
+      .social-btn { width: 240px; font-size: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="home-bg"></div>
+
+  <div class="header-banner">SOCIALS</div>
+  <div class="subtext">Connect with LPU Dance Troupe on our social platforms</div>
+
+  <div class="socials-container">
+    <a href="https://www.facebook.com/share/1AXgCvMzjz/?mibextid=wwXIfr" target="_blank" class="social-btn">📘 Facebook</a>
+    <a href="https://www.instagram.com/ldt.mnl" target="_blank" class="social-btn">📸 Instagram</a>
+    <a href="https://www.tiktok.com/@ldt.mnl?_r=1&_t=ZS-91kmaRBEz0p" target="_blank" class="social-btn">🎵 TikTok</a>
+  </div>
+
+  <a href="menus.html" class="btn-back">← Return</a>
+
+</body>
+</html>

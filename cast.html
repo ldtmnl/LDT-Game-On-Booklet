@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAST Members - GAME ON</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 50px 20px 120px 20px;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .home-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(images/purplebg.jpg) center/cover no-repeat;
+      z-index: -2;
+      filter: brightness(0.7);
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.45);
+      z-index: -1;
+    }
+
+    .title-main {
+      font-size: 48px;
+      font-weight: 700;
+      text-shadow: 0 0 10px #474ed2, 0 0 20px #c300e2;
+      margin-bottom: 10px;
+    }
+
+    .title-sub {
+      font-size: 28px;
+      font-weight: 500;
+      text-shadow: 0 0 8px #474ed2, 0 0 16px #c300e2;
+      margin-bottom: 40px;
+    }
+
+    /* Card container */
+    .cast-card {
+      text-align: center;
+    }
+
+    .cast-name {
+      margin-top: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-shadow: 0 0 6px #474ed2, 0 0 10px #c300e2;
+    }
+
+    /* DESKTOP — 4 columns */
+    .cast-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 25px;
+      row-gap: 45px;
+      max-width: 900px;
+      margin: 0 auto;
+      justify-items: center;
+    }
+
+    .cast-card img {
+      width: 170px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* TABLET — 2 columns */
+    @media (max-width: 768px) {
+      .cast-grid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 40px;
+        max-width: 380px;
+      }
+
+      .cast-card img {
+        width: 150px;
+        height: 220px;
+      }
+
+      .cast-name {
+        font-size: 14px;
+      }
+    }
+
+    /* PHONE — 2 columns, bigger images */
+    @media (max-width: 480px) {
+      .cast-grid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 15px;
+        row-gap: 35px;
+      }
+
+      .cast-card img {
+        width: 46vw;
+        height: 70vw;
+        max-width: 210px;
+        max-height: 310px;
+      }
+
+      .cast-name {
+        font-size: 13px;
+      }
+    }
+
+    /* Navigation Buttons */
+    .btn-return,
+    .btn-continue {
+      position: fixed;
+      bottom: 30px;
+      padding: 8px 20px;
+      font-size: 16px;
+      background: black;
+      color: white;
+      border: 2px solid #474ed2;
+      border-radius: 8px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      box-shadow: 0 0 6px #474ed2, 0 0 12px #c300e2;
+      transition: 0.3s ease-in-out;
+    }
+
+    .btn-return { left: 30px; }
+    .btn-continue { right: 30px; }
+
+    .btn-return:hover,
+    .btn-continue:hover {
+      background: #474ed2;
+      border-color: #c300e2;
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #474ed2, 0 0 24px #c300e2;
+    }
+
+    @media (max-width: 768px) {
+      .btn-return, .btn-continue {
+        font-size: 16px;
+        padding: 8px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .btn-return, .btn-continue {
+        font-size: 14px;
+        padding: 6px 15px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="home-bg"></div>
+  <div class="overlay"></div>
+
+  <div class="title-main">CAST</div>
+  <div class="title-sub">Members</div>
+
+  <div class="cast-grid">
+
+    <div class="cast-card"><img src="CAST POSTING/SCHEN.png"><p class="cast-name">Rauschen Baldwin T. Agustin</p></div>
+    <div class="cast-card"><img src="CAST POSTING/FITZ.png"><p class="cast-name">Fitz Amiel A. Ardeña</p></div>
+    <div class="cast-card"><img src="CAST POSTING/TRISHA.png"><p class="cast-name">Trisha Mae P. Begornia</p></div>
+    <div class="cast-card"><img src="CAST POSTING/CASSEY.png"><p class="cast-name">Fidelity Cassey R. Cañares</p></div>
+
+    <div class="cast-card"><img src="CAST POSTING/KENRICK2.png"><p class="cast-name">Reian Kenrick S. Conception</p></div>
+    <div class="cast-card"><img src="CAST POSTING/JAI.png"><p class="cast-name">Christina Julianne V. Demegillo</p></div>
+    <div class="cast-card"><img src="CAST POSTING/ACE.png"><p class="cast-name">Phol Ace M. Escal</p></div>
+    <div class="cast-card"><img src="CAST POSTING/JOANA.png"><p class="cast-name">Joana Rose B. Garabel</p></div>
+
+    <div class="cast-card"><img src="CAST POSTING/JASMINE.png"><p class="cast-name">Rwheyanne F. Jasmine Ignacio</p></div>
+    <div class="cast-card"><img src="CAST POSTING/VEA.png"><p class="cast-name">Allieszandrah Veatriesh Javier</p></div>
+    <div class="cast-card"><img src="CAST POSTING/EDCIEL.png"><p class="cast-name">Edciel S. Lontoc</p></div>
+    <div class="cast-card"><img src="CAST POSTING/JULIA.png"><p class="cast-name">Julia Girlshynne C. Moreno</p></div>
+
+    <div class="cast-card"><img src="CAST POSTING/CARMELLE.png"><p class="cast-name">Carmelle Anne M. Nieva</p></div>
+    <div class="cast-card"><img src="CAST POSTING/KAT.png"><p class="cast-name">Kate Yvonne F. Olita</p></div>
+    <div class="cast-card"><img src="CAST POSTING/RV.png"><p class="cast-name">Ronel Vincent R. Padilla</p></div>
+    <div class="cast-card"><img src="CAST POSTING/LUCKY.png"><p class="cast-name">Lucky D. Roque</p></div>
+
+    <div class="cast-card"><img src="PAUL.png"><p class="cast-name">Jhon Paul B. Riaz</p></div>
+    <div class="cast-card"><img src="CAST POSTING/GUEN.png"><p class="cast-name">Guen Abegail L. Ruiz</p></div>
+    <div class="cast-card"><img src="CAST POSTING/EZI.png"><p class="cast-name">Ezekiel Joshua DG. Sabido</p></div>
+    <div class="cast-card"><img src="CAST POSTING/KAYE.png"><p class="cast-name">Jhaecelyn Kaye I. Suazo</p></div>
+
+  </div>
+
+  <a href="menus.html" class="btn-return">← Return</a>
+  <a href="newbies.html" class="btn-continue">Continue →</a>
+
+</body>
+</html>

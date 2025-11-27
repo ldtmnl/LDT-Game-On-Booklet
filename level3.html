@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Level 3: The Final Evolve</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Orbitron', sans-serif;
+    background: #000;
+    color: white;
+    overflow-x: hidden;
+    text-align: center;
+  }
+
+  /* Full-screen background */
+  .home-bg {
+    background-image: url(images/purplebg.jpg); /* optional background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.7);
+    z-index: -2;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: -1;
+  }
+
+  /* Header */
+  .header-banner {
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    text-shadow: 0 0 10px #474ed2, 0 0 20px #c300e2;
+    margin: 60px 20px 20px 20px;
+  }
+
+  .level-desc {
+    font-size: 22px;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+  }
+
+  /* Dance card */
+  .dance-piece {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 25px 20px;
+    border: 2px solid #474ed2;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.6);
+    box-shadow: 0 0 8px #474ed2, 0 0 16px #c300e2;
+    text-align: center;
+  }
+
+  .dance-title {
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 0 0 6px #474ed2, 0 0 12px #c300e2;
+    margin-bottom: 12px;
+  }
+
+  .choreographer {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .restaged-by {
+    font-size: 16px;
+    margin-top: 3px;
+    font-weight: 400;
+  }
+
+  .performers {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 10px;
+    color: #f0f0f0;
+  }
+
+  /* Corner buttons */
+  .btn-back, .btn-next {
+    position: fixed;
+    bottom: 30px;
+    padding: 10px 25px;
+    font-size: 18px;
+    color: white;
+    background: black;
+    border: 2px solid #474ed2;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 0 6px #474ed2, 0 0 12px #c300e2;
+    text-shadow: 0 0 3px #474ed2, 0 0 6px #c300e2;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+  }
+
+  .btn-back { left: 30px; }
+  .btn-next { right: 30px; } /* same size as back */
+
+  .btn-back:hover, .btn-next:hover {
+    background: #474ed2;
+    border-color: #c300e2;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #474ed2, 0 0 24px #c300e2;
+  }
+
+  .bottom-spacer {
+  height: 150px; /* adjust height as needed */
+}
+
+.group-pic {
+  width: 100%;
+  max-width: 600px; /* default for landscape/wide images */
+  height: auto;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.group-pic-portrait {
+  width: 100%;
+  max-width: 300px; /* smaller width for portrait images */
+  height: auto;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .header-banner { font-size: 45px; }
+    .level-desc { font-size: 18px; }
+    .dance-title { font-size: 24px; }
+    .choreographer { font-size: 16px; }
+    .restaged-by { font-size: 14px; }
+    .performers { font-size: 14px; }
+    .btn-back, .btn-next { font-size: 16px; padding: 8px 20px; }
+  }
+
+  @media (max-width: 480px) {
+    .header-banner { font-size: 35px; }
+    .level-desc { font-size: 16px; }
+    .dance-title { font-size: 20px; }
+    .choreographer { font-size: 14px; }
+    .restaged-by { font-size: 12px; }
+    .performers { font-size: 12px; }
+    .btn-back, .btn-next { font-size: 14px; padding: 6px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="home-bg"></div>
+<div class="overlay"></div>
+
+<div class="header-banner">Level 3: 
+    <p>"The Final Evolve"</p>
+</div>
+<div class="level-desc">
+  ( Modern and Contemporary )
+</div>
+
+<!-- Dance pieces -->
+
+<div class="dance-piece">
+  <div class="dance-title">Mulan</div>
+  <div class="choreographer">
+    Choreography by Delsie Boy Bohol, John Paul Asombrado, Ivan Policarpio
+  </div>
+  <div class="restaged-by">Restaged by Delsie Boy Bohol</div>
+  <!-- Add group picture here -->
+  <img src="mulan.jpg" alt="Mulan Group Picture" class="group-pic">
+  <div class="performers">
+    Performed by: Allieszandrah Veatriesh Javier, Julia Girlshynne Moreno, Jhaecelyn Kaye Suazo, Fidelity Cassey Cañares, Carmelle Anne Nieva, Kate Yvonne Olita, Guen Abegail Ruiz, Trisha Mae Begornia, Joana Rose Garabel, Edciel Lontoc
+  </div>
+</div>
+
+<div class="dance-piece">
+  <div class="dance-title">LPU Cavite Dance Company</div>
+  <div class="choreographer">Guest Artist</div>
+  <img src="lcdc.PNG" alt="LPU Cavite Dance Company Group Picture" class="group-pic">
+  <div class="performers">&nbsp;</div>
+</div>
+
+<div class="dance-piece">
+  <div class="dance-title">Harana</div>
+  <div class="choreographer">Choreography by Rob Hayden, Ph.D</div>
+  <div class="restaged-by">Restaged by Delsie Boy Bohol</div>
+  <img src="harana.jpg"Harana Group Picture" class="group-pic">
+  <div class="performers">
+    Performed by: Rauschen Baldwin Agustin, Ronel Vincent Padilla, Jhaecelyn Kaye Suazo, Phol Ace Escal, Jhon Paul Riaz, Guen Abegail Ruiz, Trisha Mae Begornia, Joana Rose Garabel, Rwheyanne Jasmine Ignacio, Lucky Roque, Ezekiel Joshua Sabido, Anaiah Jazliel Amazona, Arllan Lopez, Jennifer Christine Sasutona
+  </div>
+</div>
+
+<div class="dance-piece">
+  <div class="dance-title">Eduardson Evangelio</div>
+  <div class="choreographer">Guest Artist from Ballet Philippines</div>
+  <img src="eduard.jpg" alt="Eduardson Evangelio Group Picture" class="group-pic-portrait">
+  <div class="performers">&nbsp;</div>
+</div>
+
+<div class="dance-piece">
+  <div class="dance-title">Kanlungan</div>
+  <div class="choreographer">Choreography by Danina Matulac</div>
+  <img src="kanlungan.jpg" alt="Kanlungan Group Picture" class="group-pic">
+  <div class="performers">
+    Performed by: Julia Girlshynne Moreno, Ronel Vincent Padilla, Jhaecelyn Kaye Suazo, Phol Ace Escal, Carmelle Anne Nieva, Kate Yvonne Olita, Reian Kenrick Conception, Lucky Roque
+  </div>
+</div>
+
+<div class="dance-piece">
+  <div class="dance-title">Last Chance</div>
+  <div class="choreographer">Original Concept by John Paul Asombrado</div>
+  <div class="restaged-by">Restaged by Delsie Boy Bohol</div>
+  <img src="lastchance.jpg" alt="Last Chance Group Picture" class="group-pic-portrait">
+  <div class="performers">
+    Performed by: Fidelity Cassey Cañares
+  </div>
+</div>
+
+<div class="dance-piece">
+  <div class="dance-title">LDT - Manila Alumni</div>
+  <div class="choreographer">Guest Artist</div>
+  <img src="alum.jpg" alt="LDT Manila Alumni Group Picture" class="group-pic">
+  <div class="performers">&nbsp;</div>
+</div>
+
+<!-- Buttons -->
+<a href="bonuslevel.html" class="btn-back">← Return</a>
+<a href="menus.html" class="btn-next">Back to Menu</a>
+
+<!-- Bottom spacer to create extra space -->
+<div class="bottom-spacer"></div>
+</body>
+</html>

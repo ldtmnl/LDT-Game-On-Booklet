@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Acknowledgements - GAME ON</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 50px 20px 120px 20px;
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .home-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(images/purplebg.jpg) center/cover no-repeat;
+      z-index: -2;
+      filter: brightness(0.7);
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.45);
+      z-index: -1;
+    }
+
+    .header-banner {
+      margin-top: 40px;
+      margin-bottom: 30px;
+      font-size: 36px;
+      font-weight: 700;
+      text-shadow: 0 0 10px #474ed2, 0 0 20px #c300e2;
+      letter-spacing: 3px;
+    }
+
+    .sub-header {
+      font-size: 24px;
+      font-weight: 700;
+      text-shadow: 0 0 8px #474ed2, 0 0 16px #c300e2;
+      margin-bottom: 40px;
+    }
+
+    /* Glowing box for acknowledgements */
+    .glow-box {
+      max-width: 600px;
+      background: rgba(0,0,0,0.6);
+      border: 2px solid #474ed2;
+      box-shadow: 0 0 12px #474ed2, 0 0 24px #c300e2;
+      border-radius: 12px;
+      padding: 25px 20px;
+      margin-bottom: 30px;
+      text-align: center; /* center text */
+      font-size: 18px;
+      line-height: 2.2; /* more spacing between lines */
+    }
+
+    /* Buttons fixed at bottom left and right */
+    .btn-return {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      padding: 10px 25px;
+      font-size: 18px;
+      background: black;
+      color: white;
+      border: 2px solid #474ed2;
+      border-radius: 8px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      box-shadow: 0 0 6px #474ed2, 0 0 12px #c300e2;
+      transition: 0.3s ease-in-out;
+    }
+
+    .btn-continue {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 10px 25px;
+      font-size: 18px;
+      background: black;
+      color: white;
+      border: 2px solid #474ed2;
+      border-radius: 8px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      box-shadow: 0 0 6px #474ed2, 0 0 12px #c300e2;
+      transition: 0.3s ease-in-out;
+    }
+
+    .btn-return:hover,
+    .btn-continue:hover {
+      background: #474ed2;
+      border-color: #c300e2;
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #474ed2, 0 0 24px #c300e2;
+    }
+
+    @media (max-width: 768px) {
+      .header-banner { font-size: 28px; }
+      .sub-header { font-size: 20px; margin-bottom: 30px; }
+      .glow-box { font-size: 16px; padding: 20px 15px; line-height: 2; }
+      .btn-return, .btn-continue { font-size: 16px; padding: 8px 20px; }
+    }
+
+    @media (max-width: 480px) {
+      .header-banner { font-size: 24px; margin-top: 20px; }
+      .sub-header { font-size: 18px; margin-bottom: 25px; }
+      .glow-box { font-size: 14px; padding: 15px 12px; line-height: 1.8; }
+      .btn-return, .btn-continue { font-size: 14px; padding: 6px 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="home-bg"></div>
+  <div class="overlay"></div>
+
+  <div class="header-banner">SPECIAL THANKS TO</div>
+  <div class="sub-header">Lyceum of the Philippines University - Manila</div>
+
+  <div class="glow-box">
+    Student’s Affairs Offices<br>
+    Arts and Cultural Affairs<br>
+    Building and Grounds Department<br>
+    Inquiry Physical Plants and Facilities Management<br>
+    Strategic Communications & Marketing Department<br>
+    Information and Communication Technologies<br>
+    Security Office
+  </div>
+
+  <a href="choreographers.html" class="btn-return">← Return</a>
+  <a href="menus.html" class="btn-continue">Back to Menu</a>
+
+</body>
+</html>

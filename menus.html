@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Menu - GAME ON</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Orbitron', sans-serif;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    /* Background image */
+    .home-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('images/purplebg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: brightness(0.7);
+      z-index: -999;
+    }
+
+    /* Header */
+    .header-banner {
+      text-align: center;
+      color: white;
+      font-size: 80px;
+      font-weight: 700;
+      text-shadow: 0 0 10px #474ed2, 0 0 20px #c300e2;
+      letter-spacing: 3px;
+      margin: 60px 0 40px 0;
+      z-index: 10;
+      animation: fadeIn 1.5s forwards;
+    }
+
+    /* Menu container */
+    .menu-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      margin: 75px auto 0 auto;
+      padding: 0 20px;
+      z-index: 10;
+      position: relative;
+    }
+
+    /* Menu buttons */
+    .menu-btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 25px;
+      font-size: 20px;
+      color: white;
+      background: black;
+      border: 2px solid #474ed2;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 0 6px #474ed2, 0 0 12px #c300e2;
+      text-shadow: 0 0 3px #474ed2, 0 0 6px #c300e2;
+      transition: all 0.3s ease-in-out;
+      white-space: nowrap;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    /* Stagger animation (UPDATED) */
+    .menu-btn:nth-child(1) { animation-delay: 0.5s; }
+    .menu-btn:nth-child(2) { animation-delay: 1s; }
+    .menu-btn:nth-child(3) { animation-delay: 1.5s; }
+    .menu-btn:nth-child(4) { animation-delay: 2s; }
+    .menu-btn:nth-child(5) { animation-delay: 2.5s; }
+    .menu-btn:nth-child(6) { animation-delay: 3s; }
+    .menu-btn:nth-child(7) { animation-delay: 3.5s; }
+
+    .menu-btn:hover {
+      background: #474ed2;
+      border-color: #c300e2;
+      transform: scale(1.05);
+      box-shadow: 0 0 14px #474ed2, 0 0 28px #c300e2;
+    }
+
+    /* Return button */
+    .btn-back {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background: black;
+      border: 2px solid #474ed2;
+      border-radius: 8px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-decoration: none;
+      box-shadow: 0 0 6px #474ed2, 0 0 12px #c300e2;
+      transition: all 0.3s ease-in-out;
+      z-index: 10;
+    }
+
+    .btn-back:hover {
+      background: #474ed2;
+      border-color: #c300e2;
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #474ed2, 0 0 24px #c300e2;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .header-banner { font-size: 50px; }
+      .menu-btn { font-size: 18px; padding: 12px 22px; }
+    }
+
+    @media (max-width: 480px) {
+      .header-banner { font-size: 35px; }
+      .menu-btn { font-size: 16px; padding: 10px 18px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="home-bg"></div>
+
+  <div class="header-banner">GAME ON MENU</div>
+
+  <div class="menu-container">
+    <a href="level1.html" class="menu-btn">🎮 Program Flow</a>
+    <a href="cast.html" class="menu-btn">🕹️ Cast Members</a>
+    <a href="choreographers.html" class="menu-btn">💃 Choreographers</a>
+    <a href="staff.html" class="menu-btn">🛠️ The Crew</a>
+    <a href="acknowledgements.html" class="menu-btn">🌟 Acknowledgements</a>
+    <a href="feedback.html" class="menu-btn">📩 Feedback</a>
+    <a href="socials.html" class="menu-btn">🔗 Socials</a>
+  </div>
+
+  <a href="welcome.html" class="btn-back">← Return</a>
+
+</body>
+</html>
